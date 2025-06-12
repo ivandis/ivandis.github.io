@@ -1,15 +1,21 @@
+<!-- filepath: /Users/smeda/Documents/Guptha/Business/Ivandis/Website/ivandis.github.io/ivandis.github.io/send_email.php -->
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $to = "info@ivandis.com";
-    $subject = "New Email Submission";
-    $message = "Email ID: " . $email;
-    $headers = "From: no-reply@ivandis.com";
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
 
-    if (mail($to, $subject, $message, $headers)) {
-        echo "Thank you! Your email has been sent.";
+    if ($email) {
+        $to = "info@ivandis.com";
+        $subject = "New Email Submission";
+        $message = "Email submitted: " . $email;
+        $headers = "From: webmaster@ivandis.com";
+
+        if (mail($to, $subject, $message, $headers)) {
+            echo "Email sent successfully!";
+        } else {
+            echo "Failed to send email.";
+        }
     } else {
-        echo "Unable to send your email. Please try again.";
+        echo "Invalid email address.";
     }
 }
 ?>
