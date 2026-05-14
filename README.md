@@ -8,42 +8,29 @@ A clean, responsive single-page site for Ivandis Enterprises Pvt Ltd.
 ivandis/
 ├── index.html             ← the page
 ├── styles.css             ← the look
-├── script.js              ← small interactions
+├── script.js              ← interactions (nav, scroll-to-top, animations)
 └── images/
-    ├── logo.png           ← your logo with Pure Excellence / Deep Care baked in
+    ├── logo.png           ← logo with Pure Excellence / Deep Care
     ├── favicon.png        ← browser tab icon
-    └── photos/            ← service photos and hero image
-        ├── cleaner-doorway.jpg
-        ├── cleaner-apron.jpg
-        ├── office-buildings.jpg
-        ├── pest-control.jpg
-        ├── handyman.jpg
-        ├── pink-glove-spray.jpg
-        ├── window-clean.jpg
-        └── cleaning-supplies.jpg
+    └── photos/            ← service photos and hero
 ```
 
-## How to put it live on GitHub Pages
+## Deploy to GitHub Pages
 
-1. **Back up your current site.** In your GitHub repository, download a ZIP of what's there now (Code → Download ZIP).
-2. **Upload these files.** Go to your repository on github.com, click **Add file → Upload files**, and drag in everything inside the `ivandis/` folder.
-3. **Commit.** Scroll down, type a short note like "New website design", click **Commit changes**.
-4. **Wait a minute or two.** GitHub Pages will rebuild and ivandis.com will refresh.
+1. **Back up your current site.** In your repo, download a ZIP of what's there.
+2. **Upload these files.** On github.com → your repo → Add file → Upload files → drag everything inside `ivandis/`.
+3. **Commit.** Add a message like "New website design" → Commit changes.
+4. **Wait a minute.** GitHub Pages rebuilds; refresh ivandis.com.
 
-To test locally first, double-click `index.html`.
+**Important:** after deploying, do a hard refresh in your browser (Cmd+Shift+R on Mac, Ctrl+Shift+R on Windows) so cached old files are replaced.
 
-## Customising
+## Customising text
 
-- All the text is in `index.html`. Open in a text editor to change wording.
-- Phone/email/address appear in multiple places (hero, contact cards, footer) — update all.
-- The WhatsApp link uses a pre-filled message that the visitor can edit before sending.
-- To swap a service photo, replace the file in `images/photos/` keeping the same filename.
+All wording is in `index.html`. Open in any text editor.
 
-## Want it different?
+- Phone/email/address appear in 3 places: hero badges, contact channel cards, footer.
+- The WhatsApp link is pre-filled with "Hi Ivandis, I'd like a quote for..." — your visitors can edit before sending.
 
-- Separate pages per service
-- A photo gallery / before-and-after section
-- Testimonials
-- Different colors or vibe
+## Customising images
 
-Just let me know.
+To swap a service photo, replace the file in `images/photos/` keeping the same filename.
